@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Quiz App</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="quiz">
+            <div class="quiz-header">
+                <div class="question-head">
+                <h4>Question <span id="number">1</span> of 5</h4>
+    
+                </div>
+            </div>
+            <div class="quiz-body">
+                <h3 id="ques"></h3>
+        
+                <ul class="option-group">
+                    <li class="option" onclick="putActiveClass(this)">Arham</li>
+                    <li class="option" onclick="putActiveClass(this)">Arham</li>
+                    <li class="option" onclick="putActiveClass(this)">Arham</li>
+                    <li class="option" onclick="putActiveClass(this)">Arham</li>
+                </ul>
+
+                <button class="next-btn" id="arham"  onclick="next()" disabled>Next Question</button>
+                
+            </div>
+            <div class="quiz-footer">
+                <div class="ali" ></div>
+                <div class="ali" ></div>
+                <div class="ali" ></div>
+                <div class="ali" ></div>
+                <div class="ali" ></div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./app.js"></script>
+    <script src="https://kit.fontawesome.com/6cda728fa1.js" crossorigin="anonymous"></script>
+   
+</body>
+</html>

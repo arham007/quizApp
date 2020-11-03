@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+    <title>Result</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="result">
+            <div class="head">
+                <h1>Quiz Result</h1>
+            </div>
+            <br>
+            <div class="tab">
+            
+            <table >
+                <tr>
+                    <td>Total Question</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>Attempt</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>Correct</td>
+                    <td id="correct"></td>
+                </tr>
+                <tr>
+                    <td>Wrong</td>
+                    <td id="wrong">5</td>
+                </tr>
+                <tr>
+                    <td>Percentage</td>
+                    <td id="perc"></td>
+                </tr>
+                <tr>
+                    <td>Your Total Score</td>
+                    <td id="totalScore"></td>
+                </tr>
+            </table>
+            </div>
+            <div class="bth">
+                <button onclick="back()">Back To Home</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    var c=sessionStorage.getItem("right");
+    console.log(c)
+    var w=sessionStorage.getItem("wrong");
+    var corr=document.getElementById("correct");
+    var wor=document.getElementById("wrong");
+    corr.innerHTML=c;
+    wor.innerHTML=w;
+    var Percentage=(c/5)*100;
+    document.getElementById("perc").innerHTML=Percentage + "%";
+    var total=document.getElementById("totalScore");
+    total.innerHTML=c + "/" + 5;
+
+    </script>    
+    <script src="./app.js"></script>
+</body>
+
+</html>
